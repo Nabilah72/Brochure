@@ -1,0 +1,1601 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>GFIS (M) Sdn Bhd</title>
+	<link rel="icon" type="icon" href="/images/gfis-logo.png">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/white.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<!-- <link rel="stylesheet" href="plugin/highlight/monokai.css"> -->
+
+	<style>
+		.slidecontent {
+			display: grid;
+			min-height: 100vh;
+		}
+
+		.slidecontentgrid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		/* 	Ini untuk mark area box dengan outline hitam. Boleh padam bila dah siap design	*/
+		/* .slidecontent>div {
+			border: 1px solid #333;
+		} */
+
+		/* Home page starts */
+		.grid-home {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 10% 5% 35% 8% 8% 8% 8%;
+		}
+
+		.home1 {
+			align-items: center;
+			display: flex;
+			justify-content: right;
+
+			img {
+				height: auto;
+				padding: 0 3%;
+			}
+		}
+
+		.home2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.main-title {
+				width: 100%;
+				font-family: 'Times New Roman', Times, serif;
+				font-size: 4vh;
+				font-weight: 700;
+				color: #001e54;
+				text-shadow: 2px 2px 2px rgba(0, 30, 84, 0.3);
+			}
+		}
+
+		.home3 {
+			justify-content: center;
+			align-items: center;
+			display: flex;
+
+			.motto {
+				margin-top: 0;
+				font-family: 'League Gothic', sans-serif, Arial;
+				padding: 5px;
+				width: 70%;
+				font-weight: bolder;
+				/* background-color: whitesmoke; */
+			}
+		}
+
+
+		.home4 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			/* bottom */
+			.image-1 {
+				max-width: 100%;
+				max-height: 100%;
+				opacity: 30%;
+				background-color: lightgrey;
+			}
+
+			/* top */
+			.image-2 {
+				background-color: #fff;
+				border: 5px solid whitesmoke;
+				position: absolute;
+				box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
+				/* adjust width */
+				max-width: 275px;
+				height: auto;
+			}
+		}
+
+		.home5,
+		.home6 {
+			margin: 5px 15%;
+			display: flex;
+
+			.container {
+				padding: 5px;
+				background-color: whitesmoke;
+				display: flex;
+				align-items: center;
+				width: 100%;
+			}
+
+			.icon {
+				max-width: 10%;
+				border: 2px solid #99cddc;
+				background-color: white;
+				border-radius: 20%;
+				padding: 5px;
+			}
+
+			.contact-text {
+				max-width: 100%;
+				text-align: left;
+				font-size: 1.7vh;
+				margin-left: 3%;
+			}
+		}
+
+
+		/* home page ends */
+
+		/* welcome page starts */
+		.grid-welcome {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 50% 40%;
+
+			.welcome1 {
+				grid-column: 1/span 2;
+				align-items: center;
+				display: flex;
+			}
+
+			.main-head {
+				text-align: left;
+				font-weight: 700;
+				color: #001e54;
+				margin-left: 5%;
+				font-size: 2.5vh;
+				font-family: 'Franklin Gothic', Arial, sans-serif;
+				word-spacing: 0.3rem;
+			}
+
+			.welcome2 {
+				grid-column: 1/span 2;
+				display: flex;
+
+				.sub-head {
+					line-height: 2em;
+					text-align: justify;
+					font-size: 1.5vh;
+					margin: 0 3%;
+				}
+			}
+
+			.welcome3 {
+				background-color: white;
+				grid-column: 2 /span 1;
+				align-items: center;
+				justify-content: center;
+
+				.image {
+					max-width: 100%;
+				}
+			}
+		}
+
+		/* welcome page ends */
+
+		/* About us page starts */
+		.grid-about {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 60% 35%;
+		}
+
+		.about1 {
+			grid-column: 1/span 3;
+			grid-row: 1;
+			align-items: center;
+			display: flex;
+
+			.main-head {
+				font-weight: 700;
+				color: #001e54;
+				margin-left: 5%;
+				font-size: 3vh;
+				font-family: 'Franklin Gothic', Arial, sans-serif;
+				word-spacing: 0.3rem;
+			}
+		}
+
+		.about2 {
+			grid-column: 1 / span 3;
+			grid-row: 2;
+			font-size: 2vh;
+			text-align: justify;
+
+			.text {
+				line-height: 1.5em;
+				text-align: justify;
+				font-size: 1.5vh;
+				margin: 0 3%;
+			}
+		}
+
+		.about3 {
+			grid-column: 1;
+			grid-row: 3;
+		}
+
+		.about4 {
+			grid-column: 2;
+			grid-row: 3;
+		}
+
+		.about5 {
+			grid-column: 3;
+			grid-row: 3;
+		}
+
+		/* About us page ends */
+		/* easb main page starts */
+		.grid-main {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 72% 10%;
+		}
+
+		.easbmain1 {
+			grid-column: 1;
+			grid-row: 1 / span 2;
+			background-image: url("./images/resources/cad.png");
+			background-size: 100% auto;
+			background-position: bottom center;
+			background-repeat: no-repeat;
+		}
+
+		.easbmain2,
+		.evomain2,
+		.inovmain2 {
+			grid-column: 1;
+			grid-row: 1;
+			display: flex;
+			align-items: center;
+			padding-left: 5%;
+		}
+
+		.easbmain3,
+		.evomain3,
+		.inovmain3 {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.easbmain4,
+		.evomain4,
+		.inovmain4 {
+			grid-column: 1;
+			grid-row: 3;
+		}
+
+		/* easb main page ends */
+		/* evo main page starts */
+		.evomain1 {
+			grid-column: 1;
+			grid-row: 1 / span 2;
+			background-image: url("./images/resources/bangunan.png");
+			background-size: 100% auto;
+			background-position: bottom center;
+			background-repeat: no-repeat;
+		}
+
+		/* evo main page ends */
+		/* evo profile page starts */
+		.grid-evoprof {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 5% 25% 18% 3% 10% 10% 10%;
+		}
+
+		.evoprof2,
+		.evoprof3 {
+			display: flex;
+			align-items: center;
+
+			.container {
+				display: flex;
+				font-size: 1.5vh;
+				width: 90%;
+
+				.icon {
+					max-width: 7%;
+					margin: 0;
+					border-radius: 30%;
+					background-color: #ebe9e9;
+					padding: 10px;
+					position: absolute;
+				}
+
+				.object-title {
+					margin-left: 20px;
+					text-align: justify;
+					padding: 15px 10%;
+					background-color: white;
+					border: 2px solid lightgray;
+				}
+			}
+		}
+
+		.evoprof4,
+		.evoprof6 {
+			justify-content: left;
+			margin-left: 10%;
+
+			.contact-text {
+				margin-left: 6%;
+				padding: 15px 10%;
+				background-color: #ecfbff;
+				font-size: 1.5vh;
+				border: 2px solid #99cddc;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+			}
+		}
+
+		.evoprof5 {
+			justify-content: right;
+			margin-left: -10%;
+
+			.contact-text {
+				margin-right: 6%;
+				padding: 15px 10%;
+				text-align: left;
+				background-color: #ecfbff;
+				font-size: 1.5vh;
+				border: 2px solid #99cddc;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+			}
+		}
+
+		.evoprof4,
+		.evoprof5,
+		.evoprof6 {
+			width: 100%;
+			display: flex;
+			align-items: center;
+
+			.icon {
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+				max-width: 7%;
+				border-radius: 30%;
+				padding: 5px;
+				position: absolute;
+				border: 2px solid #99cddc;
+				background-color: white;
+			}
+		}
+
+		/* evo profile page ends */
+
+		/* evo product page starts */
+		.evoprod3 {
+			background-color: #ececec;
+		}
+
+		.evoprod2,
+		.evoprod3,
+		.evoprod4 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 5%;
+
+			.object-title {
+				font-size: 1.8vh;
+				/* background-color: #e3e3e3; */
+				background-color: white;
+				border: 2px solid lightgray;
+				margin: auto;
+				font-weight: bolder;
+			}
+
+			.text {
+				text-align: justify;
+				max-width: 50%;
+				font-size: 1.5vh;
+			}
+		}
+
+		.evoprod2 img,
+		.evoprod3 img,
+		.evoprod4 img {
+			max-width: 70%;
+			max-height: 70%;
+		}
+
+		/* evo product page ends */
+		/* evo services page 1 starts */
+		.grid-evo {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 5% 25% 25% 25% 10%;
+		}
+
+		.title {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			.main-head {
+				font-weight: 700;
+				color: #001e54;
+				font-size: 2.0vh;
+				font-family: 'Franklin Gothic', Arial, sans-serif;
+				word-spacing: 0.3rem;
+			}
+		}
+
+		.evoprof1,
+		.evoserv1,
+		.evoprod1 {
+			display: flex;
+			align-items: center;
+
+			.blank {
+				margin-left: 5%;
+				background-color: #001e54;
+				width: 15%;
+				max-width: 50%;
+				height: 100%;
+			}
+
+			.logo {
+				max-width: 50%;
+			}
+		}
+
+		.evoserv2,
+		.evoserv3,
+		.evoserv4 {
+			display: flex;
+			justify-content: center;
+
+			.icon {
+				max-width: 25%;
+				max-height: 25%;
+				padding-right: 5%;
+				padding-left: 5%;
+			}
+
+			.image {
+				max-width: 40%;
+				max-height: 40%;
+				padding-right: 2%;
+				padding-left: 2%;
+			}
+		}
+
+		.blank {
+			margin-left: 5%;
+			background-color: #001e54;
+			width: 15%;
+			max-width: 50%;
+			height: 100%;
+		}
+
+		/* evo services page 1 ends */
+		/* evo services page 2 starts */
+		.grid-evo-2 {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 5% 30% 30% 30%;
+		}
+
+		.evoserv5,
+		.evoserv6 {
+			padding-top: 2%;
+		}
+
+		.grid-item.evoserv5 .image-evo2,
+		.grid-item.evoserv6 .image-evo2 {
+			max-height: 50%;
+			margin-bottom: 0%;
+			border: 2px solid #001e54;
+		}
+
+		/* evo services page 2 ends */
+
+
+		/* ino main page starts */
+
+		.inovmain1 {
+			grid-column: 1;
+			grid-row: 1 / span 2;
+			background-image: url("./images/resources/laptop.png");
+			background-size: 100% auto;
+			background-position: bottom center;
+			background-repeat: no-repeat;
+		}
+
+		/* ino main page ends */
+
+		/* ino profile page starts */
+		.grid-inovprof {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 5% 25% 20% 5% 8% 8% 8%;
+		}
+
+		.inovprof2,
+		.inovprof3 {
+			display: flex;
+			align-items: center;
+
+			.container {
+				display: flex;
+				font-size: 1.5vh;
+				width: 90%;
+
+				.icon {
+					max-width: 7%;
+					margin: 0;
+					border-radius: 30%;
+					background-color: white;
+					border: 2px solid #001e54;
+					padding: 10px;
+					position: absolute;
+				}
+
+				.object-title {
+					margin-left: 20px;
+					text-align: justify;
+					padding: 15px 10%;
+					background-color: white;
+					border: 2px solid #001e54;
+				}
+			}
+		}
+
+		.inovprof4,
+		.inovprof5,
+		.inovprof6 {
+			margin: 5px 20%;
+			display: flex;
+
+			.container {
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+				padding: 5px;
+				background-color: whitesmoke;
+				display: flex;
+				align-items: center;
+				width: 100%;
+			}
+
+			.icon {
+				max-width: 10%;
+				border: 2px solid #99cddc;
+				background-color: white;
+				border-radius: 20%;
+				padding: 5px;
+			}
+
+			.contact-text {
+				max-width: 100%;
+				text-align: left;
+				font-size: 1.5vh;
+				margin-left: 3%;
+			}
+		}
+
+		/* ino profile page ends */
+
+		/* ino product page starts */
+
+		/* ino product page ends */
+
+		/* ino project page starts */
+		.grid-inovproj {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 5% 25% 25% 25%;
+		}
+
+		/* ino project page ends */
+
+		.inovproj2,
+		.inovproj3,
+		.inovproj4 {
+			display: flex;
+			align-items: center;
+			margin: 0 5%;
+
+			.title1 {
+				margin: 0;
+				font-weight: bolder;
+				font-size: 1.8vh;
+				text-align: left;
+			}
+
+			.desc {
+				margin: 0;
+				text-align: justify;
+				font-size: 1.5vh;
+				background-color: white;
+			}
+		}
+
+		.inovproj2 .inov-project,
+		.inovproj3 .inov-project,
+		.inovproj4 .inov-project {
+			height: auto;
+			max-width: 35%;
+			margin-right: 3%;
+			border: 2px solid #99cddc;
+		}
+
+
+
+		/* ino service page starts */
+		.grid-inovserv {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 5% 18% 20% 20% 20%;
+		}
+
+		.inovprof1,
+		.inovprod1,
+		.inovproj1,
+		.inovserv1 {
+			display: flex;
+			align-items: center;
+
+			.blank {
+				margin-left: 5%;
+				background-color: #001e54;
+				width: 15%;
+				max-width: 50%;
+				height: 100%;
+			}
+
+			.logo {
+				max-width: 50%;
+			}
+		}
+
+		.inovserv2,
+		.inovserv3,
+		.inovserv4,
+		.inovserv5 {
+			display: flex;
+			align-items: center;
+			padding: 0 5%;
+
+			.image {
+				background-color: white;
+				max-width: 35%;
+				max-height: auto;
+				border: 2px solid #99cddc;
+			}
+
+			.title1 {
+				margin: 0;
+				font-weight: bolder;
+				font-size: 1.8vh;
+				text-align: left;
+			}
+
+			.desc {
+				margin: 0;
+				text-align: justify;
+				font-size: 1.5vh;
+			}
+		}
+
+		/* ino service page ends */
+
+		/* contact us starts */
+		.grid-contact {
+			display: grid;
+			width: 100%;
+			height: 100vh;
+			grid-template-rows: 10% 35% 12% 12% 12%;
+		}
+
+		.contact1 {
+			display: flex;
+			align-items: center;
+
+			.main-head {
+				margin-left: 5%;
+				font-weight: 700;
+				max-width: 70%;
+				color: #001e54;
+				font-size: 2.5vh;
+				font-family: 'Franklin Gothic', Arial, sans-serif;
+				word-spacing: 0.3rem;
+			}
+		}
+
+		.contact3 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			/* bottom */
+			.image {
+				max-width: 100%;
+				max-height: 100%;
+				opacity: 30%;
+				background-color: lightgrey;
+			}
+
+			/* top */
+			.image1 {
+				background-color: #fff;
+				border: 5px solid whitesmoke;
+				position: absolute;
+				box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
+				/* adjust width */
+				max-width: 275px;
+				height: auto;
+			}
+		}
+
+		.contact4,
+		.contact5,
+		.contact6 {
+			margin: 10px 15%;
+			display: flex;
+
+			.container {
+				padding: 5px;
+				background-color: whitesmoke;
+				display: flex;
+				align-items: center;
+				width: 100%;
+			}
+
+			.icon {
+				max-width: 10%;
+				border: 2px solid lightgray;
+				background-color: white;
+				border-radius: 20%;
+				padding: 5px;
+			}
+
+			.contact-text {
+				max-width: 100%;
+				text-align: left;
+				font-size: 1.5vh;
+				margin-left: 3%;
+			}
+		}
+
+		.contact7 {
+			text-align: center;
+			justify-content: center;
+			display: flex;
+
+			.image {
+				margin-right: 5%;
+				max-width: 10%;
+				max-height: 25px;
+			}
+		}
+
+		/* contact page ends */
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="images/bg-1.svg">
+				<div class="slidecontent grid-home">
+					<div class="home1">
+						<img class="logo" style="max-width: 10%;" src="./images/gfis-logo.png" />
+						<img class="logo"
+							style="max-width: 30%; margin-right: 10px; padding: 5px; background-color: #001e54;"
+							src="./images/an_logo.webp" />
+					</div>
+					<div class="home2">
+						<div class="title1">
+							<h1 class="main-title">GFIS (M) SDN BHD<br></h1>
+						</div>
+					</div>
+					<div class="home3">
+						<p class="motto">
+							<span style="color: #001e54;" class="wisdom">Wisdom</span>,
+							<span style="color: red;" class="passion">Passion</span>
+							<span style="text-shadow: 2px 0.5px 4px #000; color: white;" class="integrity">
+								& Integrity</span>
+						</p>
+					</div>
+					<div class="home4">
+						<img class="image-1" src="./images/resources/main-slide-1c-removebg.png" />
+						<img class="image-2" src="./images/resources/main-slide-1c-removebg.png" />
+					</div>
+					<h3 style="margin: 0 15%; font-family: 'League Gothic', sans-serif, Arial; background-color: white;"
+						class="year">
+						<hr>ASIA NAVIGATOR 2024
+						<hr>
+					</h3>
+					<div class="home5">
+						<div class="container">
+							<img class="icon" src="./images/resources/icon_date.png" />
+							<p class="contact-text">30 - 31 JANUARY 2024</p>
+						</div>
+					</div>
+					<div class="home6">
+						<div class="container">
+							<img class="icon" src="./images/resources/icon_map.png" />
+							<p class="contact-text"> KUALA LUMPUR, MALAYSIA</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section data-background-image="images/bg-1.svg">
+				<div class="slidecontent grid-welcome">
+					<div class="welcome1">
+						<h1 class="main-head">Welcome To Our Showcase</h1>
+					</div>
+					<div class="welcome2">
+						<p class="sub-head"><span class="bold">Hello everyone,</span><br><br>
+							As the CEO, I am thrilled to present our latest technological advancements in our product
+							showcase. We're dedicated staying at the forefront of innovation, designing solutions
+							that meet market demands and improve user experiences. We are excited to announce our recent
+							achievement: obtaining Malaysia Digital status for our innovation arm. This marks a
+							significant milestone in our journey. I want to extend my gratitude to our customers and
+							partners for their support. Together, we're poised to shape a brighter future. Enjoy our
+							showcase, and thank you all for being here.</p>
+					</div>
+					<div class="welcome3">
+						<img class="image" src="./images/ceo-profile.png">
+						<p style="margin-top: 0px ; font-size: 1.5vh;" class="text">Puteri Mariana<br>
+							CEO, GFIS Group of Companies</p>
+					</div>
+				</div>
+			</section>
+
+			<section data-background-image="images/bg-1.svg">
+				<div class="slidecontent grid-about">
+					<div class="about1">
+						<h3 class="main-head">About Us</h3>
+					</div>
+					<div class="about2">
+						<p class="text">
+							ICT is tremendously high demand in Malaysia with almost all sectors requires the support of
+							the state-of-the-art technologies for expansions and to improve their performance. GFIS (M)
+							Sdn Bhd sees these opportunities and believes that with our experiences and financial
+							capabilities, we determine to support the development of the country by providing our
+							services, focusing on investing on strategic project particularly under Government
+							Initiatives and Programs.
+							<br><br>
+							We manage a portfolio of diversified business ventures and investments through our strong
+							relationship with our strategic partners. Incorporated in 2019, gives us the advantage to
+							venture into new business perspectives as more new projects and initiatives have been
+							announced and planned in line with the government's aspirations.
+							<br><br>
+							We aim to be the world's most prominent & diversified holding company, maximizing
+							shareholder's values and enduring economic development locally and globally.
+						</p>
+					</div>
+					<div class="about3">
+						<a href="#easb-profile" class="info-link">
+							<img src="./images/easb-logo.png" style="padding-left: 5%;">
+						</a>
+					</div>
+					<div class="about4">
+						<a href="#evo-profile" class="info-link">
+							<img src="./images/gfisevo-logo.png">
+						</a>
+					</div>
+					<div class="about5">
+						<a href="#inov-profile" class="info-link">
+							<img src="./images/gfisis-logo.png">
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section data-background-image="images/bg-1.svg">
+
+				<section id="easb-profile">
+					<div class="slidecontent grid-main">
+						<div class="grid-item easbmain1">
+							<h1 style="color: transparent;">GFIS Emergensys Asia </h1>
+						</div>
+						<div class="grid-item easbmain2">
+							<div class="blank"></div>
+							<img src="./images/gfis-logo.png"
+								style="max-width: 20%; padding-right: 2%; padding-left: 2%;" />
+						</div>
+						<div class="grid-item easbmain3">
+							<div
+								style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80%; max-width: 600px; margin: 0 auto;">
+								<img src="./images/easb-logo.png"
+									style="width: 80%; max-width: 600px; padding-top: 10%; margin-bottom: 0%;">
+								<p
+									style="text-align: justify; font-size: 2vh; font-weight: bolder; text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">
+									TRIED AND TESTED SOLUTION
+								</p>
+							</div>
+						</div>
+						<div class="grid-item easbmain4">
+							<p
+								style="padding-left: 15%; padding-right: 15%; font-size: 1.5vh; margin-top: 1%; font-family: 'Franklin Gothic', Arial, sans-serif">
+								<a href="https://emergensys.my/">www.emergensys.my</a>
+								<br><br>
+								UNIT A-G-04 COPLACE 1, 2270 JALAN USAHAWAN 2, 63000 CYBERJAYA, SELANGOR, MALAYSIA
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent">
+						<h3>Profile</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Commodi vitae repellat rerum laudantium quibusdam voluptatem,
+							omnis quo odio quod itaque quisquam incidunt eos, numquam quae
+							perspiciatis nam magnam libero corrupti.
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent">
+						<h3>Product</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Commodi vitae repellat rerum laudantium quibusdam voluptatem,
+							omnis quo odio quod itaque quisquam incidunt eos, numquam quae
+							perspiciatis nam magnam libero corrupti.
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent">
+						<h3>Services</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Commodi vitae repellat rerum laudantium quibusdam voluptatem,
+							omnis quo odio quod itaque quisquam incidunt eos, numquam quae
+							perspiciatis nam magnam libero corrupti.
+						</p>
+					</div>
+				</section>
+
+			</section>
+
+			<section data-background-image="images/bg-1.svg">
+
+
+
+				<section id="evo-profile">
+					<div class="slidecontent grid-main">
+						<div class="grid-item evomain1">
+							<h1 style="color: transparent;">GFIS EVO (M) Sdn Bhd </h1>
+						</div>
+						<div class="grid-item evomain2">
+							<div class="blank"></div>
+							<img src="./images/gfis-logo.png"
+								style="max-width: 20%; padding-right: 2%; padding-left: 2%;" />
+						</div>
+						<div class="grid-item evomain3">
+							<div
+								style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80%; max-width: 600px; margin: 0 auto;">
+								<img src="./images/gfisevo-logo.png"
+									style="width: 80%; max-width: 600px; padding-top: 10%; margin-bottom: 0%;">
+								<p
+									style="text-align: justify; font-size: 2vh; text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">
+									<span style="font-weight: bolder;">
+										READY TO WORK WITH US?
+									</span><br>
+									<span>
+										TAKE YOUR TRANSFORMATION FORWARD
+									</span>
+								</p>
+							</div>
+						</div>
+						<div class="grid-item evomain4">
+							<p
+								style="padding-left: 15%; padding-right: 15%; font-size: 1.5vh; margin-top: 1%; font-family: 'Franklin Gothic', Arial, sans-serif">
+								<a href="http://evo.gfis.my/">www.evo.gfis.my</a>
+								<br><br>
+								UNIT A-G-07 COPLACE 1, 2270 JALAN USAHAWAN 2, 63000 CYBERJAYA, SELANGOR, MALAYSIA
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent grid-evoprof">
+						<div class="grid-item evoprof1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisevo-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">Corporate profile</h1>
+						</div>
+						<div class="grid-item evoprof2">
+							<div class="container" style="margin-left: 5%; max-width: 90%">
+								<img class="icon" src="./images/resources/icon_bot.png" />
+								<p class="object-title">GFIS EVO is dedicated to transforming communities and businesses
+									through the civil, mechanical and electrical installations. Our commitment to
+									quality, innovation, and customer satisfaction makes us the preferred choice for
+									those seeking dependable partners. </p>
+							</div>
+						</div>
+						<div class="grid-item evoprof3">
+							<div class="container" style="margin-left: 5%; max-width: 90%">
+								<img class="icon" src="./images/resources/icon_infinite.png" />
+								<p class="object-title">With a strong commitment to innovation, quality, and customer
+									satisfaction,
+									we have established ourselves as a trusted partner for both public and
+									private sector organizations seeking reliable partners. </p>
+							</div>
+						</div>
+						<h3 class="main-head"
+							style="display:flex; color: #001e54; font-family: 'Franklin Gothic', Arial, sans-serif; font-size: 2.0vh; justify-content: center;">
+							Contact Us</h3>
+						<div class="grid-item evoprof4">
+							<img class="icon" src="./images/resources/icon_phone.png">
+							<p class="contact-text">+603-8311 9966
+							</p>
+						</div>
+						<div class="grid-item evoprof5">
+							<img class="icon" src="./images/resources/icon_fax.png">
+							<p class="contact-text">+603-8322 1441
+							</p>
+						</div>
+						<div class="grid-item evoprof6">
+							<p class="contact-text">contact.evo@gfis.my
+							</p>
+							<img class="icon" src="./images/resources/icon_email.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent grid-evo">
+						<div class="grid-item evoprod1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisevo-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">Communication Systems</h1>
+						</div>
+						<div class="grid-item evoprod2">
+							<div class="container">
+								<p class="object-title">Smart PTT</p>
+								<img src="./images/resources/commsys1.jpg" />
+							</div>
+							<p class="text" style="background-color: white;">LTE based PTT commercialization with
+								Half/Full Duplex Multimedia
+								Communication with IP PTT Application, Dispatcher, MCU/VOIP/Recording Server.
+							</p>
+						</div>
+						<div class="grid-item evoprod3">
+							<div class="container">
+								<p class="object-title">Tactical MANET Radio</p>
+								<img src="./images/resources/commsys2.webp" />
+							</div>
+							<p class="text">Mobile Adhoc Network Radio System with multiple configuration (body worn,
+								PTT, robust and vehicle), with multi band operation.
+							</p>
+						</div>
+						<div class="grid-item evoprod4">
+							<div class="container">
+								<p class="object-title">MANET Radio System</p>
+								<img src="./images/resources/commsys3.jpg" />
+							</div>
+							<p class="text" style="background-color: white;"> A more tactical and advance approach of
+								MANET Radio System with complete
+								ecosystem from deployment type, command & control, cloud relay, ROIP gateway, UAV
+								module, rugged display etc.
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent grid-evo">
+						<div class="grid-item evoserv1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisevo-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">CME Services</h1>
+						</div>
+						<div class="grid-item evoserv2">
+							<img class="icon" src="./images/resources/icon_worker.png" />
+							<p class="text" style="text-align: justify; font-size: 1.5vh">
+								<span class="object-name" style="font-weight: bold;">
+									CIVIL & STRUCTURE<br>
+								</span>
+								Construction services including infrastructure, foundation, trenches etc. GFIS EVO works
+								closely with the partners to minimize the operational expenses and deliver the project
+								on budget.
+							</p>
+							<img class="image" src="./images/resources/cmeserv1.jpg" />
+						</div>
+						<div class="grid-item evoserv3">
+							<img class="image" src="./images/resources/cmeserv2.jpg" />
+							<p class="text" style="text-align: justify; font-size: 1.5vh">
+								<span class="object-name" style="font-weight: bold;">
+									MECHANICAL SERVICES<br>
+								</span>
+								Pipe fittings, steel works and specialized cooling
+								systems such as HVAC and PAC (Precision Air Conditioners).
+							</p>
+							<img class="icon" src="./images/resources/icon_skills.png" />
+						</div>
+						<div class="grid-item evoserv4">
+							<img class="icon" src="./images/resources/icon_plug.png" />
+							<p class="text" style="text-align: justify; font-size: 1.5vh;">
+								<span class="object-name" style="font-weight: bold;">
+									ELECTRICAL AND INSTRUMENT <br>
+								</span>
+								Installation services for electrical & instrument equipments and cablings by certified
+								and experienced personnel.
+							</p>
+							<img class="image" src="./images/resources/cmeserv3.jpg" />
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent grid-evo-2">
+						<div class="grid-item evoserv1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisevo-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">Trading & Proposal Services</h1>
+						</div>
+						<div class="grid-item evoserv5">
+							<img class="image-evo2" src="./images/resources/gisserv1.jpg">
+							<div style="display: flex; align-items: center; justify-content: center; padding: 0 4%;">
+								<img src="./images/resources/icon_agreement.png"
+									style="max-height: 8vh; padding-right: 3%; background-color: white; ">
+								<p class="text" style="text-align: justify; font-size: 1.5vh">
+									<span class="object-name" style="font-weight: bold">
+										TRADING <br>
+									</span>
+									All sorts of trading deal such as spare parts, special tools, measuring equipments,
+									and
+									more.
+								</p>
+							</div>
+						</div>
+						<div class="grid-item evoserv6">
+							<img class="image-evo2" src="./images/resources/gisserv2.jpg">
+							<div
+								style="display: flex; align-items: center; justify-content: center; padding: 0 4%; background-color: white;">
+								<img src="./images/resources/icon_consult.png"
+									style="max-height: 8vh; padding-right: 3%;" />
+								<p class="text" style="text-align: justify; font-size: 1.5vh">
+									<span class="object-name" style="font-weight: bold ">
+										PROPOSAL & CONSULTATION <br>
+									</span>
+									We offer consultation and proposal preparation services to help you in your tender
+									submission.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+
+
+			<section data-background-image="images/bg-1.svg">
+
+
+				<section id="inov-profile">
+					<div class="slidecontent grid-main">
+						<div class="grid-item inovmain1">
+							<h1 style="color: transparent;">GFIS Innovative Solutions</h1>
+						</div>
+						<div class="grid-item inovmain2">
+							<div class="blank"></div>
+							<img src="./images/gfis-logo.png"
+								style="max-width: 20%; padding-right: 2%; padding-left: 2%;" />
+						</div>
+						<div class="grid-item inovmain3">
+							<div
+								style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 80%; max-width: 600px; margin: 0 auto;">
+								<img src="./images/gfisis-logo.png"
+									style="width: 80%; max-width: 600px; padding-top: 10%; margin-bottom: 0%;">
+								<p
+									style="text-align: justify; font-size: 2vh; font-weight: bolder; text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;">
+									SMART SOLUTIONS, REAL-TIME RESULTS
+								</p>
+							</div>
+						</div>
+						<div class="grid-item inovmain4">
+							<p
+								style="padding-left: 15%; padding-right: 15%; font-size: 1.5vh; margin-top: 1%;font-family: 'Franklin Gothic', Arial, sans-serif;">
+								<a href=" http://innov.gfis.my/">www.innov.gfis.my</a>
+								<br><br>
+								UNIT A-G-05 COPLACE 1, 2270 JALAN USAHAWAN 2, 63000 CYBERJAYA, SELANGOR, MALAYSIA
+							</p>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="slidecontent grid-inovprof">
+						<div class="grid-item inovprof1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisis-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">Corporate Profile</h1>
+						</div>
+						<div class="grid-item inovprof2">
+							<div class="container" style="margin-left: 5%; max-width: 90%">
+								<img class="icon" src="./images/resources/icon_bot.png" />
+								<p class="object-title">GFIS Innovative Solution Sdn Bhd capable to develop and
+									customize product, services, and solution according to the
+									customer requirements. Our team will analyze the situation and
+									customize the application on affordable and reasonable cost to
+									suit the financial budget. </p>
+							</div>
+						</div>
+						<div class="grid-item inovprof3">
+							<div class="container" style="margin-left: 5%; max-width: 90%">
+								<img class="icon" src="./images/resources/icon_infinite.png" />
+								<p class="object-title">We truly agreed on the need of world class Research and
+									Development. We are now ready and geared up to provide the best quality of R&D teams
+									under GFIS Innovative Solutions Sdn Bhd to produce high quality outputs to support
+									and assist respective initiatives and programs.
+								</p>
+							</div>
+						</div>
+						<h3 class="main-head"
+							style="display:flex; color: #001e54; font-family: 'Franklin Gothic', Arial, sans-serif; font-size: 2.0vh; justify-content: center;">
+							Contact Us</h3>
+						<div class="grid-item inovprof4">
+							<div class="container">
+								<img class="icon" src="./images/resources/icon_phone.png" />
+								<p class="contact-text">+603-8230-8911</p>
+
+							</div>
+						</div>
+						<div class="grid-item inovprof5">
+							<div class="container">
+								<img class="icon" src="./images/resources/icon_fax.png" />
+								<p class="contact-text"> +603-8322-1441</p>
+							</div>
+						</div>
+						<div class="grid-item inovprof6">
+							<div class="container">
+								<img class="icon" src="./images/resources/icon_email.png" />
+								<p class="contact-text"> contact.inno@gfis.my</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="slidecontent grid-inovprod">
+						<div class="grid-item inovprod1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisis-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">Our Products</h1>
+						</div>
+						<div class="grid-item inovprod2">
+						</div>
+						<div class="grid-item inovprod3">
+						</div>
+						<div class="grid-item inovprod4">
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="slidecontent grid-inovproj">
+						<div class="grid-item inovproj1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisis-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">Our Projects</h1>
+						</div>
+						<div class="grid-item inovproj2">
+							<img class="inov-project" src="./images/resources/project1.jpg" />
+							<div class="text-container">
+								<p class="title1"> 01. Resource Monitoring System</p>
+								<p class="desc">We built an internal tool for online
+									fleet monitoring for a Malaysian
+									Emergency Response Agency</p>
+							</div>
+						</div>
+						<div class="grid-item inovproj3">
+							<img class="inov-project" src="./images/resources/project2.jpg" />
+							<div class="text-container">
+								<p class="title1"> 02. DB Synchronizer Tools</p>
+								<p class="desc">An autonomous application was
+									developed to ensure 2-tier database
+									in KL-Melaka-Kuching are in-sync
+									mission-critical process.</p>
+							</div>
+						</div>
+						<div class="grid-item inovproj4">
+							<img class="inov-project" src="./images/resources/project3.jpg" />
+							<div class="text-container">
+								<p class="title1"> 03. HRMS Application Prototype</p>
+								<p class="desc">A framework for modular HRIS was
+									developed as foundation for the
+									development of a tender MVP.</p>
+							</div>
+						</div>
+				</section>
+				<section>
+					<div class="slidecontent grid-inovserv">
+						<div class="inovserv1">
+							<div class="blank"></div>
+							<img class="logo" src="./images/gfisis-logo.png" />
+						</div>
+						<div class="title">
+							<h1 class="main-head">Our Services</h1>
+						</div>
+						<div class="inovserv2">
+							<img class="image" src="./images/resources/service-7.png" />
+							<div class="text-container" style="margin: 0 3%;">
+								<p class="title1">01. Cloud
+									and Virtualization</p>
+								<p class="desc">Custom tailored server, cloud and data
+									centre solution.</p>
+							</div>
+						</div>
+						<div style="background-color: #d8f2ffdd;" class="inovserv3">
+							<img class="image" src="./images/resources/service-4.png" />
+							<div class="text-container" style="margin: 0 3%;">
+								<p class="title1">02. System Automation</p>
+								<p class="desc">Building autonomous agent and middlewares for mission critical, business
+									logic or data manipulation.</p>
+							</div>
+						</div>
+						<div class="inovserv4">
+							<img class="image" src="./images/resources/service-1.png" />
+							<div class="text-container" style="margin: 0 3%;">
+								<p class="title1">03. ICT Development</p>
+								<p class="desc">MVP to full end-to-end development on mobile, web, IOT and hybrid
+									platforms.</p>
+							</div>
+						</div>
+						<div style="background-color: #d8f2ffdd;" class="inovserv5">
+							<img class="image" src="./images/resources/service-2.png" />
+							<div class="text-container" style="margin: 0 3%;">
+								<p class="title1">04. ICT Consultancy</p>
+								<p class="desc">System deployment, integration and operational consultancy.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<section data-background-image="images/bg-1.svg">
+				<div class="slidecontent grid-contact">
+					<div class=contact1>
+						<h1 class="main-head">CONTACT US TODAY!</h1>
+					</div>
+					<!-- <div class="contact2"></div> -->
+					<div class="contact3">
+						<img class="image" src="./images/resources/main-slide-1c-removebg.png" />
+						<img class="image1" src="./images/resources/main-slide-1c-removebg.png" />
+					</div>
+					<div class="contact4">
+						<div class="container">
+							<img class="icon" src="./images/resources/icon_phone.png" />
+							<p class="contact-text">Phone: (+6) 03-8230-8911
+								<br>Fax: (+6) 03-8322-1441
+							</p>
+						</div>
+					</div>
+					<div class="contact5">
+						<div class="container">
+							<img class="icon" src="./images/resources/icon_email.png" />
+							<p class="contact-text">contactus@gfis.my
+							</p>
+						</div>
+					</div>
+					<div class="contact6">
+						<div class="container">
+							<img class="icon" src="./images/resources/icon_map.png" />
+							<p class="contact-text">A-1-09 CoPlace 1, 2270 Jalan Usahawan 2, 63000 Cyberjaya,
+								Selangor, MALAYSIA
+							</p>
+						</div>
+					</div>
+					<div class="contact7">
+						<img class="image" src="./images/resources/flag_my.png">
+						<img class="image" src="./images/gfis-black.png">
+						<p style="font-size: 1.3vh;"> © GFIS (M) Sdn Bhd 2023<br> All Rights Reserved </p>
+					</div>
+				</div>
+		</div>
+	</div>
+	</section>
+	</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+	<script src="js/menu.js"></script>
+
+	<!-- 
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	-->
+
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Display a presentation progress bar
+			progress: true,
+
+			// Disables the default reveal.js slide layout (scaling and centering)
+			// so that you can use custom CSS layout
+			disableLayout: true,
+
+			navigationMode: 'default',
+
+			plugins: [RevealMenu],
+			// Learn about plugins: https://revealjs.com/plugins/
+			// plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+
+			menu: {
+				// Specifies which side of the presentation the menu will
+				// be shown. Use 'left' or 'right'.
+				side: 'left',
+
+				// Specifies the width of the menu.
+				// Can be one of the following:
+				// 'normal', 'wide', 'third', 'half', 'full', or
+				// any valid css length value
+				width: 'normal',
+
+				// Add slide numbers to the titles in the slide list.
+				// Use 'true' or format string (same as reveal.js slide numbers)
+				numbers: false,
+
+				// Specifies which slide elements will be used for generating
+				// the slide titles in the menu. The default selects the first
+				// heading element found in the slide, but you can specify any
+				// valid css selector and the text from the first matching
+				// element will be used.
+				// Note: that a section data-menu-title attribute or an element
+				// with a menu-title class will take precedence over this option
+				titleSelector: 'h1, h2, h3, h4, h5, h6',
+
+				// If slides do not have a matching title, attempt to use the
+				// start of the text content as the title instead
+				useTextContentForMissingTitles: false,
+
+				// Hide slides from the menu that do not have a title.
+				// Set to 'true' to only list slides with titles.
+				hideMissingTitles: false,
+
+				// Adds markers to the slide titles to indicate the
+				// progress through the presentation. Set to 'false'
+				// to hide the markers.
+				markers: true,
+
+				// Specify custom panels to be included in the menu, by
+				// providing an array of objects with 'title', 'icon'
+				// properties, and either a 'src' or 'content' property.
+				custom: false,
+
+				// Specifies the themes that will be available in the themes
+				// menu panel. Set to 'true' to show the themes menu panel
+				// with the default themes list. Alternatively, provide an
+				// array to specify the themes to make available in the
+				// themes menu panel, for example...
+				//
+				// [
+				//     { name: 'Black', theme: 'dist/theme/black.css' },
+				//     { name: 'White', theme: 'dist/theme/white.css' },
+				//     { name: 'League', theme: 'dist/theme/league.css' },
+				//     {
+				//       name: 'Dark',
+				//       theme: 'lib/reveal.js/dist/theme/black.css',
+				//       highlightTheme: 'lib/reveal.js/plugin/highlight/monokai.css'
+				//     },
+				//     {
+				//       name: 'Code: Zenburn',
+				//       highlightTheme: 'lib/reveal.js/plugin/highlight/zenburn.css'
+				//     }
+				// ]
+				//
+				// Note: specifying highlightTheme without a theme will
+				// change the code highlight theme while leaving the
+				// presentation theme unchanged.
+				// themes: false,
+
+				themes: [
+					{ name: 'White', theme: 'css/white.css' },
+				],
+				// Specifies the path to the default theme files. If your
+				// presentation uses a different path to the standard reveal
+				// layout then you need to provide this option, but only
+				// when 'themes' is set to 'true'. If you provide your own
+				// list of themes or 'themes' is set to 'false' the
+				// 'themesPath' option is ignored.
+				themesPath: 'css/',
+
+				// Specifies if the transitions menu panel will be shown.
+				// Set to 'true' to show the transitions menu panel with
+				// the default transitions list. Alternatively, provide an
+				// array to specify the transitions to make available in
+				// the transitions panel, for example...
+				// ['None', 'Fade', 'Slide']
+				transitions: false,
+
+				// Adds a menu button to the slides to open the menu panel.
+				// Set to 'false' to hide the button.
+				openButton: true,
+
+				// If 'true' allows the slide number in the presentation to
+				// open the menu panel. The reveal.js slideNumber option must
+				// be displayed for this to take effect
+				openSlideNumber: false,
+
+				// If true allows the user to open and navigate the menu using
+				// the keyboard. Standard keyboard interaction with reveal
+				// will be disabled while the menu is open.
+				keyboard: true,
+
+				// Normally the menu will close on user actions such as
+				// selecting a menu item, or clicking the presentation area.
+				// If 'true', the sticky option will leave the menu open
+				// until it is explicitly closed, that is, using the close
+				// button or pressing the ESC or m key (when the keyboard
+				// interaction option is enabled).
+				sticky: false,
+
+				// If 'true' standard menu items will be automatically opened
+				// when navigating using the keyboard. Note: this only takes
+				// effect when both the 'keyboard' and 'sticky' options are enabled.
+				autoOpen: true,
+
+				// If 'true' the menu will not be created until it is explicitly
+				// requested by calling RevealMenu.init(). Note this will delay
+				// the creation of all menu panels, including custom panels, and
+				// the menu button.
+				delayInit: false,
+
+				// If 'true' the menu will be shown when the menu is initialised.
+				openOnInit: false,
+
+				// By default the menu will load it's own font-awesome library
+				// icons. If your presentation needs to load a different
+				// font-awesome library the 'loadIcons' option can be set to false
+				// and the menu will not attempt to load the font-awesome library.
+				loadIcons: true
+			}
+		});
+	</script>
+</body>
+
+</html>
