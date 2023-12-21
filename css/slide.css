@@ -1,0 +1,763 @@
+.slidecontent>div {
+    border: 1px solid #333;
+}
+
+.grid-home {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 10% 5% 35% 8% 8% 8% 8%;
+}
+
+.home1 {
+    align-items: center;
+    display: flex;
+    justify-content: right;
+
+    img {
+        height: auto;
+    }
+}
+
+.home2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .main-title {
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4vh;
+        font-weight: 700;
+        color: #001e54;
+        text-shadow: 2px 2px 2px rgba(0, 30, 84, 0.3);
+    }
+}
+
+.home3 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    .motto {
+        margin-top: 0;
+        font-family: 'League Gothic', sans-serif, Arial;
+        padding: 5px;
+        width: 70%;
+        font-weight: bolder;
+        /* background-color: whitesmoke; */
+    }
+}
+
+
+.home4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* bottom */
+    .image-1 {
+        max-width: 100%;
+        max-height: 100%;
+        opacity: 30%;
+        background-color: lightgrey;
+    }
+
+    /* top */
+    .image-2 {
+        background-color: #fff;
+        border: 5px solid whitesmoke;
+        position: absolute;
+        box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
+        /* adjust width */
+        max-width: 275px;
+        height: auto;
+    }
+}
+
+.home5,
+.home6 {
+    margin: 5px 15%;
+    display: flex;
+
+    .container {
+        padding: 5px;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .icon {
+        max-width: 10%;
+        border: 2px solid #99cddc;
+        background-color: white;
+        border-radius: 20%;
+        padding: 5px;
+    }
+
+    .contact-text {
+        max-width: 100%;
+        text-align: left;
+        font-size: 1.7vh;
+        margin-left: 3%;
+    }
+}
+
+
+/* home page ends */
+
+/* welcome page starts */
+.grid-welcome {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 50% 40%;
+
+    .welcome1 {
+        grid-column: 1/span 2;
+        align-items: center;
+        display: flex;
+    }
+
+    .main-head {
+        text-align: left;
+        font-weight: 700;
+        color: #001e54;
+        margin-left: 5%;
+        font-size: 2.5vh;
+        font-family: 'Franklin Gothic', Arial, sans-serif;
+        word-spacing: 0.3rem;
+    }
+
+    .welcome2 {
+        grid-column: 1/span 2;
+        display: flex;
+
+        .sub-head {
+            line-height: 2em;
+            text-align: justify;
+            font-size: 1.5vh;
+            margin: 0 3%;
+        }
+    }
+
+    .welcome3 {
+        background-color: white;
+        grid-column: 2 /span 1;
+        align-items: center;
+        justify-content: center;
+
+        .image {
+            max-width: 100%;
+        }
+    }
+}
+
+/* welcome page ends */
+
+/* About us page starts */
+.grid-about {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 60% 35%;
+}
+
+.about1 {
+    grid-column: 1/span 3;
+    grid-row: 1;
+    align-items: center;
+    display: flex;
+
+    .main-head {
+        font-weight: 700;
+        color: #001e54;
+        margin-left: 5%;
+        font-size: 3vh;
+        font-family: 'Franklin Gothic', Arial, sans-serif;
+        word-spacing: 0.3rem;
+    }
+}
+
+.about2 {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    font-size: 2vh;
+    text-align: justify;
+
+    .text {
+        line-height: 1.5em;
+        text-align: justify;
+        font-size: 1.5vh;
+        margin: 0 3%;
+    }
+}
+
+.about3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.about4 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.about5 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+/* About us page ends */
+/* easb main page starts */
+.grid-main {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 72% 10%;
+}
+
+.easbmain1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-image: url("../images/resources/cad.png");
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.easbmain2,
+.evomain2,
+.inovmain2 {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.easbmain3,
+.evomain3,
+.inovmain3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.easbmain4,
+.evomain4,
+.inovmain4 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+/* easb main page ends */
+/* evo main page starts */
+.evomain1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-image: url("../images/resources/bangunan.png");
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+/* evo main page ends */
+/* evo profile page starts */
+.grid-evoprof {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 5% 25% 18% 3% 10% 10% 10%;
+}
+
+.evoprof2,
+.evoprof3 {
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        font-size: 1.5vh;
+        width: 90%;
+
+        .icon {
+            max-width: 7%;
+            margin: 0;
+            border-radius: 30%;
+            background-color: #ebe9e9;
+            padding: 10px;
+            position: absolute;
+        }
+
+        .object-title {
+            margin-left: 20px;
+            text-align: justify;
+            padding: 15px 10%;
+            background-color: white;
+            border: 2px solid lightgray;
+        }
+    }
+}
+
+.evoprof4,
+.evoprof6 {
+    justify-content: left;
+    margin-left: 10%;
+
+    .contact-text {
+        margin-left: 6%;
+        padding: 15px 10%;
+        background-color: #ecfbff;
+        font-size: 1.5vh;
+        border: 2px solid #99cddc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+    }
+}
+
+.evoprof5 {
+    justify-content: right;
+    margin-left: -10%;
+
+    .contact-text {
+        margin-right: 6%;
+        padding: 15px 10%;
+        text-align: left;
+        background-color: #ecfbff;
+        font-size: 1.5vh;
+        border: 2px solid #99cddc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.evoprof4,
+.evoprof5,
+.evoprof6 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .icon {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        max-width: 7%;
+        border-radius: 30%;
+        padding: 5px;
+        position: absolute;
+        border: 2px solid #99cddc;
+        background-color: white;
+    }
+}
+
+/* evo profile page ends */
+
+/* evo product page starts */
+.evoprod3 {
+    background-color: #ececec;
+}
+
+.evoprod2,
+.evoprod3,
+.evoprod4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+
+    .object-title {
+        font-size: 1.8vh;
+        /* background-color: #e3e3e3; */
+        background-color: white;
+        border: 2px solid lightgray;
+        margin: auto;
+        font-weight: bolder;
+    }
+
+    .text {
+        text-align: justify;
+        max-width: 50%;
+        font-size: 1.5vh;
+    }
+}
+
+.evoprod2 img,
+.evoprod3 img,
+.evoprod4 img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+/* evo product page ends */
+/* evo services page 1 starts */
+.grid-evo {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 5% 25% 25% 25% 10%;
+}
+
+.title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .main-head {
+        font-weight: 700;
+        color: #001e54;
+        font-size: 2.0vh;
+        font-family: 'Franklin Gothic', Arial, sans-serif;
+        word-spacing: 0.3rem;
+    }
+}
+
+.evoprof1,
+.evoserv1,
+.evoprod1 {
+    display: flex;
+    align-items: center;
+
+    .blank {
+        margin-left: 5%;
+        background-color: #001e54;
+        width: 15%;
+        max-width: 50%;
+        height: 100%;
+    }
+
+    .logo {
+        max-width: 50%;
+    }
+}
+
+.evoserv2,
+.evoserv3,
+.evoserv4 {
+    display: flex;
+    justify-content: center;
+
+    .icon {
+        max-width: 25%;
+        max-height: 25%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .image {
+        max-width: 40%;
+        max-height: 40%;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+}
+
+.blank {
+    margin-left: 5%;
+    background-color: #001e54;
+    width: 15%;
+    max-width: 50%;
+    height: 100%;
+}
+
+/* evo services page 1 ends */
+/* evo services page 2 starts */
+.grid-evo-2 {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 5% 30% 30% 30%;
+}
+
+.evoserv5,
+.evoserv6 {
+    padding-top: 2%;
+}
+
+.grid-item.evoserv5 .image-evo2,
+.grid-item.evoserv6 .image-evo2 {
+    max-height: 50%;
+    margin-bottom: 0%;
+    border: 2px solid #001e54;
+}
+
+/* evo services page 2 ends */
+
+
+/* ino main page starts */
+
+.inovmain1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-image: url("../images/resources/laptop.png");
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+/* ino main page ends */
+
+/* ino profile page starts */
+.grid-inovprof {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 5% 25% 20% 5% 8% 8% 8%;
+}
+
+.inovprof2,
+.inovprof3 {
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        font-size: 1.5vh;
+        width: 90%;
+
+        .icon {
+            max-width: 7%;
+            margin: 0;
+            border-radius: 30%;
+            background-color: white;
+            border: 2px solid #001e54;
+            padding: 10px;
+            position: absolute;
+        }
+
+        .object-title {
+            margin-left: 20px;
+            text-align: justify;
+            padding: 15px 10%;
+            background-color: white;
+            border: 2px solid #001e54;
+        }
+    }
+}
+
+.inovprof4,
+.inovprof5,
+.inovprof6 {
+    margin: 5px 20%;
+    display: flex;
+
+    .container {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .icon {
+        max-width: 10%;
+        border: 2px solid #99cddc;
+        background-color: white;
+        border-radius: 20%;
+        padding: 5px;
+    }
+
+    .contact-text {
+        max-width: 100%;
+        text-align: left;
+        font-size: 1.5vh;
+        margin-left: 3%;
+    }
+}
+
+/* ino profile page ends */
+
+/* ino product page starts */
+
+/* ino product page ends */
+
+/* ino project page starts */
+.grid-inovproj {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 5% 25% 25% 25%;
+}
+
+/* ino project page ends */
+
+.inovproj2,
+.inovproj3,
+.inovproj4 {
+    display: flex;
+    align-items: center;
+    margin: 0 5%;
+
+    .title1 {
+        margin: 0;
+        font-weight: bolder;
+        font-size: 1.8vh;
+        text-align: left;
+    }
+
+    .desc {
+        margin: 0;
+        text-align: justify;
+        font-size: 1.5vh;
+        background-color: white;
+    }
+}
+
+.inovproj2 .inov-project,
+.inovproj3 .inov-project,
+.inovproj4 .inov-project {
+    height: auto;
+    max-width: 35%;
+    margin-right: 3%;
+    border: 2px solid #99cddc;
+}
+
+
+
+/* ino service page starts */
+.grid-inovserv {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 5% 18% 20% 20% 20%;
+}
+
+.inovprof1,
+.inovprod1,
+.inovproj1,
+.inovserv1 {
+    display: flex;
+    align-items: center;
+
+    .blank {
+        margin-left: 5%;
+        background-color: #001e54;
+        width: 15%;
+        max-width: 50%;
+        height: 100%;
+    }
+
+    .logo {
+        max-width: 50%;
+    }
+}
+
+.inovserv2,
+.inovserv3,
+.inovserv4,
+.inovserv5 {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+
+    .image {
+        background-color: white;
+        max-width: 35%;
+        max-height: auto;
+        border: 2px solid #99cddc;
+    }
+
+    .title1 {
+        margin: 0;
+        font-weight: bolder;
+        font-size: 1.8vh;
+        text-align: left;
+    }
+
+    .desc {
+        margin: 0;
+        text-align: justify;
+        font-size: 1.5vh;
+    }
+}
+
+/* ino service page ends */
+
+/* contact us starts */
+.grid-contact {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 35% 12% 12% 12%;
+}
+
+.contact1 {
+    display: flex;
+    align-items: center;
+
+    .main-head {
+        margin-left: 5%;
+        font-weight: 700;
+        max-width: 70%;
+        color: #001e54;
+        font-size: 2.5vh;
+        font-family: 'Franklin Gothic', Arial, sans-serif;
+        word-spacing: 0.3rem;
+    }
+}
+
+.contact3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* bottom */
+    .image {
+        max-width: 100%;
+        max-height: 100%;
+        opacity: 30%;
+        background-color: lightgrey;
+    }
+
+    /* top */
+    .image1 {
+        background-color: #fff;
+        border: 5px solid whitesmoke;
+        position: absolute;
+        box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
+        /* adjust width */
+        max-width: 275px;
+        height: auto;
+    }
+}
+
+.contact4,
+.contact5,
+.contact6 {
+    margin: 10px 15%;
+    display: flex;
+
+    .container {
+        padding: 5px;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .icon {
+        max-width: 10%;
+        border: 2px solid lightgray;
+        background-color: white;
+        border-radius: 20%;
+        padding: 5px;
+    }
+
+    .contact-text {
+        max-width: 100%;
+        text-align: left;
+        font-size: 1.5vh;
+        margin-left: 3%;
+    }
+}
+
+.contact7 {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+
+    .image {
+        margin-right: 5%;
+        max-width: 10%;
+        max-height: 25px;
+    }
+}
