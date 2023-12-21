@@ -7,7 +7,7 @@
 
 	<title>GFIS (M) Sdn Bhd</title>
 	<link rel="icon" type="icon" href="/images/gfis-logo.png">
-	<link rel ="stylesheet" href="css/slide.css">
+	<link rel="stylesheet" href="css/slide.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/white.css">
@@ -666,6 +666,13 @@
 	-->
 
 	<script>
+		 window.onload = function() {
+            var isSamsungBrowser = navigator.userAgent.match(/SamsungBrowser/i);
+            if (isSamsungBrowser) {
+                // Redirect to the specified URL for Samsung Internet users
+                window.location.href = "https://bella-gfis-brochure.netlify.app/";
+            }
+        };
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
