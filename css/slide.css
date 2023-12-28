@@ -310,7 +310,7 @@
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 10% 3% 30% 5% 25% 5% 10%
+    grid-template-rows: 10% 5% 30% 5% 25% 5% 8%;
 }
 
 .act11{
@@ -335,7 +335,7 @@
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 10% 72% 10%;
+    grid-template-rows: 10% 72% 18%;
 }
 
 .easbmain1 {
@@ -617,11 +617,10 @@
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 10% 5% 25% 20% 3% 9% 9% 9%;
+    grid-template-rows: 10% 5% 25% 5% 13% 7% 8% 8% 8%;
 }
 
-.inovprof2,
-.inovprof3 {
+.inovprof2 {
     display: flex;
     align-items: center;
 
@@ -631,12 +630,12 @@
         width: 100%;
 
         .icon {
-            max-width: 7%;
-            margin: 0;
+            max-width: 8%;
+            margin-top: 5px;
             border-radius: 30%;
             background-color: white;
             border: 2px solid #001e54;
-            padding: 10px;
+            padding: 5px;
             position: absolute;
         }
 
@@ -650,9 +649,33 @@
     }
 }
 
+.inovprof3a{
+    margin: 0 2%;
+    border: 2px solid #99cddc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d8f2ff70;
+
+    .icon {
+        margin: 0;
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+
+.inovprof3b{
+    border: 2px solid #99cddc;
+    margin: 0 2%;
+    padding: 0 2%;
+    font-size: 1.5vh;
+    text-align: justify;
+}
+
 .inovprof4,
 .inovprof5,
 .inovprof6 {
+    grid-column: 1/span 2;
     padding: 5px 15%;
     display: flex;
 
@@ -684,11 +707,74 @@
 /* ino profile page ends */
 
 /* ino product page starts */
+.grid-inovprod2{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 10% 5% 3% 15% 20% 15% 20%;
+}
+
+.inovprod5{
+    grid-column: 1/span 2;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    .desc-prod{
+        text-align: center;
+        margin: 0 1% ;
+        padding: 0;
+        font-size: 1.5vh;
+        background-color: #d8f2ff;
+    }
+}
+
 .grid-inovprod {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-rows: 10% 5% 25% 25% 25%;
+    grid-template-rows: 10% 5% 15% 20% 5% 30%
+}
+
+.inovprod2{
+    grid-column: 1 /span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
+    .product1{
+        margin: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.inovprod3{
+    grid-column: 1/span 3;
+    padding: 0 2%;
+    background-color: white;
+
+    .main-title{
+        margin: 0;
+        font-size: 1.7vh;
+        font-weight: bolder;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .sub-title{
+        margin: 0;
+        font-size: 1.5vh;
+        text-align: justify;
+    }
+}
+
+.inovprod4{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* ino product page ends */
 
@@ -699,8 +785,6 @@
     height: 100vh;
     grid-template-rows: 10% 5% 25% 25% 25%;
 }
-
-/* ino project page ends */
 
 .inovproj2,
 .inovproj3,
