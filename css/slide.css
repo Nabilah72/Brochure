@@ -1,11 +1,50 @@
-.slidecontent>div {
-    /* border: 1px solid #333; */
+/* .slidecontent>div {
+    border: 1px solid #333;
+} */
+
+.grid-item {
+    text-align: center;
 }
 
-.grid-home {
+.slidecontent {
     display: grid;
     width: 100%;
     height: 100vh;
+}
+
+.blank {
+    margin-left: 5%;
+    background-color: #001e54;
+    width: 15%;
+    max-width: 50%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.main2 {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.main3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.main4{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.grid-home {
     grid-template-columns: 15%;
     grid-template-rows: 15% 5% 3% 15% 35% 9% 9%;
 }
@@ -76,9 +115,6 @@
 
 /* welcome page starts */
 .grid-welcome {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 40% 40%;
 
     .welcome1 {
@@ -124,9 +160,6 @@
 
 /* About us page starts */
 .grid-about {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 60% 35%;
 }
 
@@ -159,28 +192,25 @@
     }
 }
 
+.about3,.about4,.about5{
+    grid-row: 3;
+}
+
 .about3 {
     grid-column: 1;
-    grid-row: 3;
 }
 
 .about4 {
     grid-column: 2;
-    grid-row: 3;
 }
 
 .about5 {
     grid-column: 3;
-    grid-row: 3;
 }
-
 /* About us page ends */
 
 /* Activity page starts */
 .grid-act {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 20% 2% 25% 5% 25%;
 }
 
@@ -204,7 +234,6 @@
     display: flex;
     align-items: center;
     padding: 0 5%;
-    background-color: gainsboro;
 
     .title{
         margin: 0;
@@ -212,7 +241,8 @@
         text-align: left;
         font-weight: bolder;	
         font-size: 1.5vh;
-        background-color: white;
+        background-color: #2B3991;
+        color: white;
         clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
         padding: 5px;
     }
@@ -274,9 +304,6 @@
 }
 /* part 2 */
 .grid-act2 {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 2% 30% 5% 25% 5% 10%;
 }
 
@@ -299,9 +326,6 @@
 
 /* easb main page starts */
 .grid-main {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 72% 18%;
 }
 
@@ -312,30 +336,6 @@
     background-size: 100% auto;
     background-position: bottom center;
     background-repeat: no-repeat;
-}
-
-.easbmain2,
-.evomain2,
-.inovmain2 {
-    grid-column: 1;
-    grid-row: 1;
-    display: flex;
-    align-items: center;
-    padding-left: 5%;
-}
-
-.easbmain3,
-.evomain3,
-.inovmain3 {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.easbmain4,
-.evomain4,
-.inovmain4 {
-    grid-column: 1;
-    grid-row: 3;
 }
 
 /* easb main page ends */
@@ -352,9 +352,6 @@
 /* evo main page ends */
 /* evo profile page starts */
 .grid-evoprof {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 5% 25% 18% 3% 10% 10% 10%;
 }
 
@@ -477,9 +474,6 @@
 /* evo product page ends */
 /* evo services page 1 starts */
 .grid-evo {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 5% 25% 25% 25% 10%;
 }
 
@@ -502,18 +496,6 @@
 .evoprod1 {
     display: flex;
     align-items: center;
-
-    .blank {
-        margin-left: 5%;
-        background-color: #001e54;
-        width: 15%;
-        max-width: 50%;
-        height: 100%;
-    }
-
-    .logo {
-        max-width: 50%;
-    }
 }
 
 .evoserv2,
@@ -534,21 +516,9 @@
         padding:0 3%;
     }
 }
-
-.blank {
-    margin-left: 5%;
-    background-color: #001e54;
-    width: 15%;
-    max-width: 50%;
-    height: 100%;
-}
-
 /* evo services page 1 ends */
 /* evo services page 2 starts */
 .grid-evo-2 {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 5% 30% 30% 30%;
 }
 
@@ -581,9 +551,6 @@
 
 /* ino profile page starts */
 .grid-inovprof {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 5% 25% 5% 13% 7% 8% 8% 8%;
 }
 
@@ -674,10 +641,7 @@
 /* ino profile page ends */
 
 /* ino product page starts */
-.grid-inovprod2{
-    display: grid;
-    width: 100%;
-    height: 100vh;
+.grid-inovprod{
     grid-template-rows: 10% 5% 3% 15% 20% 15% 20%;
 }
 
@@ -689,17 +653,14 @@
 
     .desc-prod{
         text-align: center;
-        margin: 0 1% ;
+        margin: 0 2% ;
         padding: 0;
         font-size: 1.5vh;
         background-color: #d8f2ff;
     }
 }
 
-.grid-inovprod {
-    display: grid;
-    width: 100%;
-    height: 100vh;
+.grid-inovprod2 {
     grid-template-rows: 10% 5% 15% 20% 5% 30%
 }
 
@@ -747,9 +708,6 @@
 
 /* ino project page starts */
 .grid-inovproj {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 5% 25% 25% 25%;
 }
 
@@ -763,17 +721,18 @@
 
     .title1 {
         display: flex;
-        margin: 0;
+        margin: 0 2%;
         font-weight: bolder;
         font-size: 1.7vh;
         text-align: left;
-        background-color: #d8f2ff;
+        color: white;
+        background-color: #2B3991;
         clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
         padding: 7px;
     }
 
     .desc {
-        margin: 0;
+        margin: 0 2%;
         text-align: justify;
         font-size: 1.5vh;
         background-color: white;
@@ -790,9 +749,6 @@
 /* ino project page ends */
 /* ino service page starts */
 .grid-inovserv {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 5% 19% 19% 19% 19%;
 }
 
@@ -802,14 +758,6 @@
 .inovserv1 {
     display: flex;
     align-items: center;
-
-    .blank {
-        margin-left: 5%;
-        background-color: #001e54;
-        width: 15%;
-        max-width: 50%;
-        height: 100%;
-    }
 
     .logo {
         max-width: 50%;
@@ -836,12 +784,10 @@
         margin: 0;
         font-weight: bolder;
         font-size: 1.7vh;
-        text-align: left;
     }
 
     .desc {
         margin: 0;
-        text-align: justify;
         font-size: 1.5vh;
     }
 }
@@ -850,9 +796,6 @@
 
 /* contact us starts */
 .grid-contact {
-    display: grid;
-    width: 100%;
-    height: 100vh;
     grid-template-rows: 10% 35% 12% 12% 12%;
 }
 
@@ -870,7 +813,7 @@
     }
 }
 
-.contact3 {
+.contact2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -895,9 +838,9 @@
     }
 }
 
+.contact3,
 .contact4,
-.contact5,
-.contact6 {
+.contact5 {
     margin: 15px 15%;
     display: flex;
 
@@ -926,7 +869,7 @@
     }
 }
 
-.contact7 {
+.contact6 {
     text-align: center;
     justify-content: center;
     display: flex;
